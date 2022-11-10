@@ -6,25 +6,25 @@
 */
 
 
-// const areThereDuplicates = (arrOfLetters) => {
-//     let left = 0
-//     let right = arrOfLetters.length - 1
+const areThereDuplicates = (arrOfLetters) => {
+    let left = 0
+    let right = arrOfLetters.length - 1
 
-//     for (let i = 1; i < arrOfLetters.length; i++){
-//         if (arrOfLetters[left] === arrOfLetters[right]){
-//             return true;
-//         } else if (arrOfLetters[right] === arrOfLetters[right + 1]) {
-//             return true;
-//         } 
-//         right--;
-//     }
+    for (let i = 1; i < arrOfLetters.length; i++){
+        if (arrOfLetters[left] === arrOfLetters[right]){
+            return true;
+        } else if (arrOfLetters[right] === arrOfLetters[right + 1]) {
+            return true;
+        } 
+        right--;
+    }
 
-//     return false;
-// }
+    return false;
+}
 
-// // Tests
-// console.log(areThereDuplicates(['a', 'a', 'd', 'e'])) // true
-// console.log(areThereDuplicates(['a', 'b', 'c'])) // false
+// Tests
+console.log(areThereDuplicates(['a', 'a', 'd', 'e'])) // true
+console.log(areThereDuplicates(['a', 'b', 'c'])) // false
 
 //? ########################################################################
 
@@ -36,29 +36,31 @@ where the average of the pair equals the target average.
 -- Please implement with time complexity of O(n) and space O(1)
 */
 
-// const avgPair = (arr, avgTarget) => {
-//     let left = 0;
-//     let right = arr.length - 1;
+const avgPair = (arr, avgTarget) => {
+    let left = 0;
+    let right = arr.length - 1;
 
-//     while (left < right) {
-//         let avg = arr[left] + arr[right] / 2
+    while (left < right) {
+        let avg = arr[left] + arr[right] / 2
 
-//         if (avg === avgTarget) return true;
-//         else if (avg < avgTarget){
-//             left++
-//         }
-//         else {
-//             right--
-//         }
-//     }
-//     return false;
+        if (avg === avgTarget) return true;
+        else if (avg < avgTarget){
+            left++
+        }
+        else {
+            right--
+        }
+    }
+    return false;
 
-// }
-// // Test Cases: 
-// console.log(avgPair([1,2,3],2.5)) // true
-// console.log(avgPair([1,3,3,5,6,7,10,12,19],8)) //true
-// console.log(avgPair([-1,0,3,4,5,6], 4.1)) // false
-// console.log(avgPair([],4)) // false
+}
+// Test Cases: 
+console.log(avgPair([1,2,3],2.5)) // true
+console.log(avgPair([1,3,3,5,6,7,10,12,19],8)) //true
+console.log(avgPair([-1,0,3,4,5,6], 4.1)) // false
+console.log(avgPair([],4)) // false
+
+//? ########################################################################
 
 /*
 Given an array of integers and a number, write a function called minSubarraySum,
