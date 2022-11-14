@@ -13,7 +13,6 @@ const solution = (nums) => {
         return -1
     }
     
-
     let storeNum = {}
 
     for (let n of nums){
